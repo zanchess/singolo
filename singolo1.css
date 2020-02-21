@@ -68,11 +68,9 @@
 	width: 3px;
 	height: 3px;
 	border-radius: 50%;
-
 	position: absolute;
 	top: 50%;
 	right: -16px;
-
 	transform: translateY(-50%);
 }
 
