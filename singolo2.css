@@ -25,9 +25,10 @@
 
 .portfolio-p{
 	color: #666d89;
-	padding-top: 22px;
-	padding-left: 39px;
+	padding-top: 23px;
+	padding-left: 40px;
 	letter-spacing: 0.4px;
+	font-size: 16px;
 }
 
 .filters{
@@ -57,7 +58,7 @@
 }
 
 .gallery{
-	margin-top: 20px;
+	margin-top: 19px;
 	margin-left: 20px;
 	display: grid;
 	grid-template-columns: repeat(4, 24%);
