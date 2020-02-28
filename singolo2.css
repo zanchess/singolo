@@ -135,12 +135,14 @@
 .staff-h3{
 	padding-top: 13px;
 	font-size: 17px;
+	height: 18px;
+	overflow: hidden;
 }
 
 .staff-p{
 	font-size: 12px;
 	text-align: justify;
-	padding-top: 10px;
+	padding-top: 11px;
 	line-height: 21px;
 	word-spacing: -1px;
 }
