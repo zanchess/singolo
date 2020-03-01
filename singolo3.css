@@ -21,6 +21,7 @@
 	padding-left: 40px;
 	font-size: 30px;
 	letter-spacing: -0.8px;
+	word-spacing: -.3px;
 }
 
 .form-p{
@@ -30,6 +31,9 @@
 	text-align: justify;
 	padding-top: 19px;
 	line-height: 30px;
+	letter-spacing: 0.23px;
+	font-size: 16px;
+	;
 }
 
 .form-wrapper{
@@ -38,7 +42,7 @@
 }
 
 .form-block{
-	width: 619px;
+	width: 620px;
 	margin-top: 42px;
 	padding-left: 40px;
 }
@@ -63,12 +67,15 @@ input:-ms-input-placeholder{color: #f48c8f;}
 input::-webkit-input-placeholder{color: #f48c8f;}
 
 input:focus, input:active{
-	
 	outline: none;
 }
 
 input:required{
 	background-color: #d6564f;
+}
+
+.form-submit{
+	cursor: pointer;
 }
 
 textarea{
@@ -95,52 +102,66 @@ textarea:-ms-input-placeholder{color: #f48c8f;}
 textarea::-webkit-input-placeholder{color: #f48c8f;}
 
 .contacts{
-	width:280px;
-	padding-left: 21px;
+	width:295px;
+	padding-left: 20px;
 	padding-top: 42px;
 }
 
 .contacts-p{
 	color: #f0d8d9;
-	padding-top: 9px;
+	padding-top: 7px;
 	font-size: 11px;
 	text-align: justify;
 	word-spacing: -2px;
-	line-height: 21px;
+	line-height: 22px;
 }
 
 .contacts-h3{
 	color: #f0d8d9;
 	font-size: 18px;
+	padding-top: 1px;
 }
 
 .contacts-list{
 	list-style-type: none;
 	color: #f0d8d9;
 	padding-top: 21px;
-	padding-left: 18px;
+	padding-left: 15px;
 }
 
 .contacts-list>li{
-	margin-top: 5px;
+	margin-top: 4px;
 	font-size: 12px;
-	padding-left: 3px;
+
 }
 
-.location{
+.contacts-list>.location{
 	list-style-image: url(./assets/images/singolo3/location.png);
+	padding-top: 1px;
+	padding-left: 2px;
+
 }
 
 .contacts-list>.phone{
 	list-style-image: url(./assets/images/singolo3/phone.png);
-	padding-top: 3px;
-	margin-left: 1px;
+	padding-top: 4px;
+	margin-left: 2px;
 }
 
 .contacts-list>.mail{
 	list-style-image: url(./assets/images/singolo3/mail.png);
 	margin-top: 8px;
 	margin-left: 3px;
+}
+
+.contacts-li>a{
+	text-decoration: none;
+	color: #f0d8d9;
+	margin-left: 6px;
+}
+
+.contacts-li>span{
+	margin-left: 6px;
 }
 
 .footer{
@@ -151,7 +172,7 @@ textarea::-webkit-input-placeholder{color: #f48c8f;}
 	align-items: center;
 }
 .copy{
-	margin-left: 40px;
+	margin-left: 42px;
 }
 
 .copy>p{
@@ -161,9 +182,14 @@ textarea::-webkit-input-placeholder{color: #f48c8f;}
 
 .links{
 	margin-right: 40px;
-	padding-top: 3px;
+	padding-top: 5px;
 }
 .links>a{
+	margin-left: 4px;
+}
+
+.links>a:nth-child(2){
 	margin-left: 3px;
+	margin-right: -1px;
 }
 
