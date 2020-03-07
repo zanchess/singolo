@@ -1,1 +1,1 @@
-https://zanchess.github.io/singolo/singolo.htm
+https://zanchess.github.io/singolo/singolo.html
