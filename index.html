@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="fonts.css">
 		<link rel="stylesheet" href="./style.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="container" >
@@ -135,23 +136,23 @@
 				<a class="filters-link" href="#">Graphic Design</a>
 				<a class="filters-link" href="#">Artwork</a>
 			</nav>
-			<div class="gallery">
-				<div class="gallery-img"><img src="./assets/images/singolo2/Project-9.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Project-6.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Image-6.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Image-3.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Project-8.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Image-8.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Image-5.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Layer-8.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Project-7.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Image-7.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Image-4.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Project.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Image-7.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Image-4.png" alt="my work"></div>
-				<div class="gallery-img"><img src="./assets/images/singolo2/Project.png" alt="my work"></div>
-			</div>
+			<div class="gallery" id="gallery">
+				<img class="gallery-img" src="./assets/images/singolo2/Project-9.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Project-6.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Image-6.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Image-3.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Project-8.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Image-8.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Image-5.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Layer-8.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Project-7.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Image-7.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Image-4.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Project.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Image-7.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Image-4.png" alt="my work">
+				<img class="gallery-img" src="./assets/images/singolo2/Project.png" alt="my work">
+			</div>69
 		</section>
 		<section class="about" id="about"> 
 			<h2 class="about-h2">About Us</h2>
@@ -205,21 +206,21 @@
 			</p>
 			<div class="form-wrapper">
 				<div class="form-block">
-					<form action="./index.html" method="GET">
+					<form action="./index.html" method="GET" id="form">
 						<div>
-							<input type="text" name="name" placeholder="Name" required>
+							<input type="text" name="name" placeholder="Name" id="name" required>
 						</div>
 						<div>
-							<input type="email" name="email" placeholder="Email" required>
+							<input type="email" name="email" placeholder="Email" id="email" required>
 						</div>
 						<div>
-							<input type="text"  placeholder="Subject">
+							<input type="text"  placeholder="Subject" id="subject">
 						</div>
 						<div>
 							<textarea name="textarea" placeholder="Describe your project in detail..." id="text" cols="30" rows="10"></textarea>
 						</div>
 						<div>
-							<input class="form-submit" type="submit" value="Submit">
+							<input class="form-submit" type="submit" value="Submit" id="submit">
 						</div>
 					</form>
 				</div> 
@@ -237,6 +238,15 @@
 						<li class="contacts-li mail"><a href="mailto:info@singolo.com">info@singolo.com</a> </li>
 					</ul>
 				</div>
+			</div>
+			<div class="window-overlay window-closed" id="window-overlay"></div>
+			<div class="window window-closed" id="window">
+				<div class="window-info" id="window-info">
+					<p class="window-succses">Письмо отправлено</p>
+					<p class="window-subject" id="window-subject"></p>
+					<p class="window-descr" id="window-descr"></p>
+				</div>
+				<button id="window-ok" class="window-ok" title="OK">OK</button>
 			</div>
 		</section>
 		<footer class="footer">

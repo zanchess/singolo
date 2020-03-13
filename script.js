@@ -107,7 +107,6 @@ function plusSlide () {
     }
 }
 
-
 let prev = document.getElementById('prev');
 let next = document.getElementById('next')
 
@@ -124,4 +123,96 @@ function slideAction(e) {
 
 firstSlide.addEventListener('click', slideAction);
 secondSlide.addEventListener('click', slideAction);
+
+/*GALLERY */
+
+let galleryBlock = document.getElementById('gallery');
+let currentElem = null; 
+
+function addBorder(e) {
+    let images = galleryBlock.querySelectorAll('.gallery-img');
+    
+    images.forEach(elem =>{
+        if (elem.classList.contains('on-border')) {
+            elem.classList.toggle('on-border');
+        }
+    });
+
+    if (e.target.classList.contains('gallery-img')) {
+        e.target.classList.add('on-border');
+    }
+}
+
+galleryBlock.addEventListener('click', addBorder);
+
+/*FORM */
+let nameString = null,
+    emailString = null,
+    subjectString = null,
+    textareaString = null;
+
+let inputName = document.getElementById('name'),
+    inputEmail = document.getElementById('email'),
+    inputSubject = document.getElementById('subject'),
+    textarea = document.getElementById('text'),
+    submitBtn = document.getElementById('submit')
+    windowBlock = document.getElementById('window'),
+    windowOverlay = document.getElementById('window-overlay'),
+    okeyBtn = document.getElementById('window-ok'),
+    mailTheme = document.getElementById('window-subject'),
+    mailDescription = document.getElementById('window-descr');
+    
+
+inputName.addEventListener('input', function () {
+    nameString = inputName.value;
+});
+
+inputEmail.addEventListener('input', function () {
+    emailString = inputEmail.value;
+});
+
+inputSubject.addEventListener('input', function () {
+    subjectString = inputSubject.value;
+});
+
+textarea.addEventListener('input', function () {
+    textareaString = textarea.value;
+});
+
+submitBtn.addEventListener('click', function (e) {
+    if (!nameString) {
+        inputName.placeholder = "input NAME please"
+    }
+    if (!emailString) {
+        inputEmail.placeholder = "input EMAIL please"
+    }
+    if (nameString && emailString) {
+        windowBlock.classList.remove('window-closed');
+        windowOverlay.classList.remove('window-closed');
+        if (!subjectString) {
+            mailTheme.innerHTML = "Без темы";
+        } else{
+            mailTheme.innerHTML = `Тема: ${subjectString}`;
+        }
+
+        if (!textareaString) {
+            mailDescription.innerHTML = "Без описания";
+        } else{
+            mailDescription.innerHTML = `Описание: ${textareaString}`;
+        }
+    }
+
+    e.preventDefault();
+});
+
+okeyBtn.addEventListener('click', function () {
+    windowBlock.classList.add('window-closed');
+    windowOverlay.classList.add('window-closed');
+    inputName.value = "";
+    inputEmail.value = "";
+    inputSubject.value = "";
+    textarea.value = "";
+    inputName.placeholder = "Name"
+    inputEmail.placeholder = "Email"
+});
 
