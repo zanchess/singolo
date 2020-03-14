@@ -381,6 +381,11 @@ html{
 	border: solid 1px #aeaeb0;
 }
 
+.filter-active{
+	color: #aeaeb0;
+	border-color: #aeaeb0;
+}
+
 .gallery{
 	margin-top: 19px;
 	margin-left: 20px;

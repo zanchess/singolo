@@ -145,6 +145,35 @@ function addBorder(e) {
 
 galleryBlock.addEventListener('click', addBorder);
 
+/*FILTER*/
+
+let filters = document.getElementById('filter');
+
+function makeRandomArr(a, b) {
+	return Math.random() - 0.5;
+}
+
+filters.addEventListener('click', function (e) {
+	e.preventDefault();
+
+	if(!e.target.classList.contains('filter-active')){
+		let images = galleryBlock.querySelectorAll('.gallery-img');
+		let imagesArr = [...images].sort(makeRandomArr);
+	
+		let filterBtn = filters.querySelectorAll('.filters-link');
+		filterBtn.forEach(elem => elem.classList.remove('filter-active'));
+		e.target.classList.add('filter-active');
+	
+		galleryBlock.innerHTML = "";
+		imagesArr.forEach(elem => {
+			if (elem.classList.contains('on-border')) elem.classList.remove('on-border');
+			galleryBlock.appendChild(elem)
+		});
+	}
+});
+
+
+
 /*FORM */
 let nameString = null,
     emailString = null,
@@ -215,4 +244,6 @@ okeyBtn.addEventListener('click', function () {
     inputName.placeholder = "Name"
     inputEmail.placeholder = "Email"
 });
+
+
 
