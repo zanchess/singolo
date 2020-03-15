@@ -46,6 +46,7 @@ navbar.addEventListener("click", (e) =>{
 
 
 window.addEventListener('scroll', () =>{
+    console.log(window.scrollY);
 	switch (true) {
 		case window.scrollY > 100:
 				header.classList.add('header-sticky');
@@ -53,7 +54,29 @@ window.addEventListener('scroll', () =>{
 		case window.scrollY < 100:
 				header.classList.remove('header-sticky');
 				break;
-}
+	}
+	switch (true) {
+		case window.scrollY < 551:
+			links.forEach(element => element.classList.remove('link-active'));
+			links[0].classList.add('link-active');
+			break;
+		case window.scrollY > 551 && window.scrollY < 1064:
+			links.forEach(element => element.classList.remove('link-active'));
+			links[1].classList.add('link-active');
+			break;
+		case window.scrollY >= 1064 &&  window.scrollY < 1923:
+				links.forEach(element => element.classList.remove('link-active'));
+				links[2].classList.add('link-active');
+				break;
+		case window.scrollY >= 1923 &&  window.scrollY < 2653:
+				links.forEach(element => element.classList.remove('link-active'));
+				links[3].classList.add('link-active');
+				break;
+		case window.scrollY >= 2653:
+				links.forEach(element => element.classList.remove('link-active'));
+				links[4].classList.add('link-active');
+				break;
+	}   
 });
 
 /*CAROUSEL*/
@@ -210,7 +233,7 @@ textarea.addEventListener('input', function () {
 
 submitBtn.addEventListener('click', function (e) {
     if (!nameString) {
-        inputName.placeholder = "input NAME please"
+        inputName.placeholder = "input NAME please";
     }
     if (!emailString) {
         inputEmail.placeholder = "input EMAIL please"
@@ -233,6 +256,8 @@ submitBtn.addEventListener('click', function (e) {
 
     e.preventDefault();
 });
+
+
 
 okeyBtn.addEventListener('click', function () {
     windowBlock.classList.add('window-closed');

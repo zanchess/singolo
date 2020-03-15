@@ -554,6 +554,10 @@ input:required{
 	background-color: #d6564f;
 }
 
+.input-error{
+	border: 1px solid #434759;
+}
+
 .form-submit{
 	cursor: pointer;
 }
