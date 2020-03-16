@@ -168,7 +168,7 @@ function addBorder(e) {
 
 galleryBlock.addEventListener('click', addBorder);
 
-/*FILTER*/
+/*FILTERS*/
 
 let filters = document.getElementById('filter');
 
