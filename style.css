@@ -542,6 +542,7 @@ input{
 	background-color: #d6564f;
 	color: #f48c8f;
 	color: #f0d8d9;
+	font-family: 'Lato', sans-serif;
 }
 input:-ms-input-placeholder{color: #f48c8f;}
 input::-webkit-input-placeholder{color: #f48c8f;}

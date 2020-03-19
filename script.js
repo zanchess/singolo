@@ -1,21 +1,21 @@
 /*HEADER */
 
-let navbar = document.getElementById('nav');
-let header = document.getElementById('header');
-let links = document.querySelectorAll('.nav-link');
+let navbar = document.getElementById('nav'),
+    header = document.getElementById('header'),
+    links = document.querySelectorAll('.nav-link');
 
 
-let homeLink = document.getElementById('home-link');
-let servicesLink = document.getElementById('services-link');
-let portfolioLink = document.getElementById('portfolio-link');
-let aboutLink = document.getElementById('about-link');
-let contactLink = document.getElementById('contact-link');
+let homeLink = document.getElementById('home-link'),
+    servicesLink = document.getElementById('services-link'),
+    portfolioLink = document.getElementById('portfolio-link'),
+    aboutLink = document.getElementById('about-link'),
+    contactLink = document.getElementById('contact-link');
 
-let servicesBlock = document.getElementById('services');
-let portfolioBlock = document.getElementById('portfolio');
-let aboutBlock = document.getElementById('about');
-let formBlock = document.getElementById('form');
-let homeBlock = document.getElementById('home');
+let servicesBlock = document.getElementById('services'),
+    portfolioBlock = document.getElementById('portfolio'),
+    aboutBlock = document.getElementById('about'),
+    formBlock = document.getElementById('form'),
+    homeBlock = document.getElementById('home');
 
 
 
@@ -45,38 +45,31 @@ navbar.addEventListener("click", (e) =>{
 });
 
 
-window.addEventListener('scroll', () =>{
+window.addEventListener('scroll', (e) =>{
+    let blocks = document.querySelectorAll('.content > .block'),
+        navLink = document.querySelectorAll('.nav-link');
+    console.log(blocks);
+
     console.log(window.scrollY);
-	switch (true) {
-		case window.scrollY > 100:
-				header.classList.add('header-sticky');
-				break;
-		case window.scrollY < 100:
-				header.classList.remove('header-sticky');
-				break;
-	}
-	switch (true) {
-		case window.scrollY < 551:
-			links.forEach(element => element.classList.remove('link-active'));
-			links[0].classList.add('link-active');
-			break;
-		case window.scrollY > 551 && window.scrollY < 1064:
-			links.forEach(element => element.classList.remove('link-active'));
-			links[1].classList.add('link-active');
-			break;
-		case window.scrollY >= 1064 &&  window.scrollY < 1923:
-				links.forEach(element => element.classList.remove('link-active'));
-				links[2].classList.add('link-active');
-				break;
-		case window.scrollY >= 1923 &&  window.scrollY < 2653:
-				links.forEach(element => element.classList.remove('link-active'));
-				links[3].classList.add('link-active');
-				break;
-		case window.scrollY >= 2653:
-				links.forEach(element => element.classList.remove('link-active'));
-				links[4].classList.add('link-active');
-				break;
-	}   
+    blocks.forEach(elem => {
+        if (elem.offsetTop <= window.scrollY+60 && (elem.offsetHeight + elem.offsetTop) > window.scrollY) {
+            navLink.forEach(el => {
+                el.classList.remove('link-active');
+                if (elem.getAttribute('id') === el.getAttribute('href').substring(1)) {
+                    el.classList.add('link-active');
+                }
+            });
+        }
+    });
+
+switch (true) {
+    case window.scrollY > 100:
+        header.classList.add('header-sticky');
+        break;
+    case window.scrollY < 100:
+        header.classList.remove('header-sticky');
+        break;
+}
 });
 
 /*CAROUSEL*/
