@@ -1,10 +1,6 @@
 Singolo
 =======
 
-## Ссылка на singolo page (только верстка)
+## Ссылка на singolo page 
 https://zanchess.github.io/singolo/index.html
-
-## Задание Singolo-dom
-
-Для проверки singolo-dom скачайте репозиторий и зайдите в ветку __singolo-dom__
 
