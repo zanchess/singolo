@@ -213,17 +213,6 @@ html{
 	background-image: url(./assets/images/singolo-dom/bg_blue.jpg);
 }
 
-.shadow1{
-	position: absolute;
-	top: 70px;
-	left: 135px;
-}
-
-.shadow2{
-	position: absolute;
-	top: 190px;
-	right: 100px;
-}
 .background-hor{
 	height: 197px;
 	width: 400px;
@@ -272,8 +261,7 @@ html{
   font-size: 18px;
   color: rgb(118, 126, 158);
   line-height: 1.667;
-  text-align: justify;
-  width: 939px;
+  text-align: justify; 
   margin-top: 19px;
 	word-spacing: -1px;
 	font-weight: normal;
@@ -290,13 +278,11 @@ html{
 .service {
   display: flex;
 	padding: 46px 0 7px 0;
-	
 }
 
 .service-bottom{
 	padding-top: 26px;
 }
-
 
 .service-img {
   display: flex;
@@ -328,7 +314,7 @@ html{
 
 /*PORTFOLIO*/
 .portfolio{
-	height: 863px;
+	padding-bottom: 40px;
 	border-bottom: 6px solid #323746;
 	background-color: #2d303a;
 }
@@ -773,4 +759,77 @@ textarea::-webkit-input-placeholder{color: #f48c8f;}
 .links>a:nth-child(2){
 	margin-left: 4px;
 	margin-right: -1px;
+}
+
+
+@media screen and (max-width: 1019px){
+	.container{
+		width: 100%;
+		font-family: 'Lato', sans-serif;
+	}
+
+	.slider{
+		position: relative;
+		width: 100%;
+		border-bottom: 6px solid #ea676b;
+	}
+
+	.block1{
+		margin-right: 0;
+	}
+
+.slider-img1{
+	width: 162px;
+	height: 344px;
+}
+
+.slider-img2{
+	width: 344px;
+	height: 162px;
+}
+.background-ver{
+	width: 70%;
+	height: 300px;
+}
+
+.background-hor{
+	width: 80%;
+	height: 130px;
+}
+
+.header-sticky{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	min-height: 50px;
+	z-index: 3;
+	border-bottom: 0px;
+	box-sizing: border-box;
+}
+
+.grid-wrapper {
+	
+	grid-template-columns: repeat(2, 320px);
+	
+}
+
+.gallery {
+	grid-template-columns: repeat(3, 32%);
+}
+
+.services {
+	padding: 59px 40px 54px 40px;
+	border-bottom: 6px solid white;
+	letter-spacing: -0.04px;
+	background-color: #f2f2f2;
+}
+
+.staff{
+	grid-template-columns: repeat(3, 30%);
+}
+
+.staff-img > img{
+	width: 28vw;
+}
+
 }

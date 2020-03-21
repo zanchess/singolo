@@ -48,9 +48,7 @@ navbar.addEventListener("click", (e) =>{
 window.addEventListener('scroll', (e) =>{
     let blocks = document.querySelectorAll('.content > .block'),
         navLink = document.querySelectorAll('.nav-link');
-    console.log(blocks);
 
-    console.log(window.scrollY);
     blocks.forEach(elem => {
         if (elem.offsetTop <= window.scrollY+60 && (elem.offsetHeight + elem.offsetTop) > window.scrollY) {
             navLink.forEach(el => {
