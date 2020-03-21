@@ -213,6 +213,17 @@ html{
 	background-image: url(./assets/images/singolo-dom/bg_blue.jpg);
 }
 
+.shadow1{
+	position: absolute;
+	top: 70px;
+	left: 135px;
+}
+
+.shadow2{
+	position: absolute;
+	top: 190px;
+	right: 100px;
+}
 .background-hor{
 	height: 197px;
 	width: 400px;
@@ -489,6 +500,8 @@ html{
 
 /*FORM*/
 .form{
+	padding-top: 80px;
+	padding-bottom: 70px;
 	height: 648px;
 	background-color: #f06c64;
 	border-bottom: 6px solid #ea676b;
