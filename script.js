@@ -259,8 +259,12 @@ okeyBtn.addEventListener('click', function () {
     inputEmail.value = "";
     inputSubject.value = "";
     textarea.value = "";
-    inputName.placeholder = "Name"
-    inputEmail.placeholder = "Email"
+    inputName.placeholder = "Name";
+    inputEmail.placeholder = "Email";
+    nameString = null;
+    emailString = null;
+    subjectString = null;
+    textareaString = null;
 });
 
 
