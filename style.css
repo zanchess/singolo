@@ -334,6 +334,7 @@ html{
 	letter-spacing: 0.1px;
 	font-size: 18px;
 	
+	
 }
 
 .filters{
@@ -768,6 +769,7 @@ textarea::-webkit-input-placeholder{color: #f48c8f;}
 		font-family: 'Lato', sans-serif;
 	}
 
+	/*SLIDER */
 	.slider{
 		position: relative;
 		width: 100%;
@@ -809,12 +811,8 @@ textarea::-webkit-input-placeholder{color: #f48c8f;}
 
 .grid-wrapper {
 	
-	grid-template-columns: repeat(2, 320px);
+	grid-template-columns: repeat(2, 49%);
 	
-}
-
-.gallery {
-	grid-template-columns: repeat(3, 32%);
 }
 
 .services {
@@ -830,6 +828,33 @@ textarea::-webkit-input-placeholder{color: #f48c8f;}
 
 .staff-img > img{
 	width: 28vw;
+}
+
+.gallery {
+	grid-template-columns: repeat(3, 30%);
+	gap: 13px;
+	margin-left: 45px;
+}
+
+.gallery > img{
+	width: 28vw;
+	
+}
+
+.portfolio-p{
+	margin-right: 30px;
+}
+
+.form-wrapper{
+	width: 95%;
+}
+
+.form-block {
+	width: 70%;
+}
+
+.contacts {
+	width: 30%;
 }
 
 }
