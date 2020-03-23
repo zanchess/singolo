@@ -266,4 +266,11 @@ okeyBtn.addEventListener('click', function () {
 });
 
 
+let burgerMenu = document.getElementById('burger');
+
+burgerMenu.addEventListener('click', function () {
+    burgerMenu.classList.toggle('menu-open');
+    navbar.classList.toggle('nav-open');
+});
+
 
