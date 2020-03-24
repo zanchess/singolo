@@ -273,4 +273,7 @@ burgerMenu.addEventListener('click', function () {
     navbar.classList.toggle('nav-open');
 });
 
+window.addEventListener('resize', () => {
+    console.log(window.innerWidth)
+});
 
