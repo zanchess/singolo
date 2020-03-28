@@ -558,8 +558,13 @@ html{
 	padding-left: 40px;
 }
 
-form>div{
+form>input{
 	margin-bottom: 16px;
+}
+
+form>input:last-child{
+	margin-bottom: 0;
+	margin-top: 16px;
 }
 
 input{
@@ -793,6 +798,10 @@ textarea::-webkit-input-placeholder{color: #f48c8f;}
 	margin-right: -1px;
 }
 
+.form-error{
+	border: 2px solid red;
+}
+
 
 @media screen and (max-width: 1019px){
 	.container{
@@ -809,7 +818,7 @@ textarea::-webkit-input-placeholder{color: #f48c8f;}
 	}
 
 	.nav-link {
-		padding:0 0 9px 25px;
+		padding:0 0 9px 29px;
 	}
 
 	/*SLIDER */
@@ -992,7 +1001,7 @@ textarea::-webkit-input-placeholder{color: #f48c8f;}
 	margin-top: 22px;
 }
 
-form>div {
+form>input {
 	margin-bottom: 12px;
 }
 
@@ -1313,7 +1322,7 @@ textarea{
 		flex-direction: column;
 	}
 
-	form > div:last-child{
+	form > input:last-child{
 		margin-bottom: 0;
 	}
 	

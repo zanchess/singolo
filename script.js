@@ -196,7 +196,8 @@ let nameString = null,
     subjectString = null,
     textareaString = null;
 
-let inputName = document.getElementById('name'),
+let form = document.getElementById('form'),
+    inputName = document.getElementById('name'),
     inputEmail = document.getElementById('email'),
     inputSubject = document.getElementById('subject'),
     textarea = document.getElementById('text'),
@@ -224,14 +225,9 @@ textarea.addEventListener('input', function () {
     textareaString = textarea.value;
 });
 
-submitBtn.addEventListener('click', function (e) {
-    if (!nameString) {
-        inputName.placeholder = "input NAME please";
-    }
-    if (!emailString) {
-        inputEmail.placeholder = "input EMAIL please"
-    }
-    if (nameString && emailString) {
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (inputName.checkValidity() && inputEmail.checkValidity()) {
         windowBlock.classList.remove('window-closed');
         windowOverlay.classList.remove('window-closed');
         if (!subjectString) {
@@ -239,15 +235,13 @@ submitBtn.addEventListener('click', function (e) {
         } else{
             mailTheme.innerHTML = `Тема: ${subjectString}`;
         }
-        
         if (!textareaString) {
             mailDescription.innerHTML = "Без описания";
         } else{
             mailDescription.innerHTML = `Описание: ${textareaString}`;
-        }
+        } 
     }
-
-    e.preventDefault();
+    
 });
 
 
