@@ -73,6 +73,7 @@ switch (true) {
 /*CAROUSEL*/
 
 let items = document.querySelectorAll('.slider-container');
+let slider = document.getElementById('home');
 let currentItem = 0;
 let isEnable = true;
 
@@ -113,12 +114,14 @@ function minusSlide () {
     if (isEnable) {
         previousItem(currentItem);
     }
+    slider.classList.toggle('border2');
 }
 
 function plusSlide () {
     if (isEnable) {
         nextItem(currentItem);
     }
+    slider.classList.toggle('border2');
 }
 
 let prev = document.getElementById('prev');
@@ -187,7 +190,6 @@ filters.addEventListener('click', function (e) {
 });
 
 
-
 /*FORM */
 let nameString = null,
     emailString = null,
@@ -237,7 +239,7 @@ submitBtn.addEventListener('click', function (e) {
         } else{
             mailTheme.innerHTML = `Тема: ${subjectString}`;
         }
-
+        
         if (!textareaString) {
             mailDescription.innerHTML = "Без описания";
         } else{
@@ -247,7 +249,6 @@ submitBtn.addEventListener('click', function (e) {
 
     e.preventDefault();
 });
-
 
 
 okeyBtn.addEventListener('click', function () {
@@ -266,14 +267,29 @@ okeyBtn.addEventListener('click', function () {
 });
 
 
-let burgerMenu = document.getElementById('burger');
+let burgerMenu = document.getElementById('burger'),
+    logo = document.getElementById('logo');
 
 burgerMenu.addEventListener('click', function () {
     burgerMenu.classList.toggle('menu-open');
     navbar.classList.toggle('nav-open');
+    windowOverlay.classList.toggle('window-closed');
+    logo.classList.toggle('logo-active');
 });
 
-window.addEventListener('resize', () => {
-    console.log(window.innerWidth)
+window.addEventListener('resize', function () {
+    if (burgerMenu.classList.contains('menu-open')) {
+        burgerMenu.classList.remove('menu-open');
+    }
+    if (navbar.classList.contains('nav-open')) {
+        navbar.classList.remove('nav-open');
+    }
+    if (!windowOverlay.classList.contains('window-closed')) {
+        windowOverlay.classList.add('window-closed');
+    }
+    if (logo.classList.contains('logo-active')) {
+        logo.classList.remove('logo-active');
+    }
+
 });
 
