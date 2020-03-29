@@ -21,9 +21,13 @@ let servicesBlock = document.getElementById('services'),
 
 navbar.addEventListener("click", (e) =>{
 	e.preventDefault();
-	let attr = e.target.getAttribute('id');
-	links.forEach(element => element.classList.remove('link-active'));
-	e.target.classList.add('link-active');
+    let attr = e.target.getAttribute('id');
+    if (e.target.classList.contains('nav-link')) {
+        links.forEach(element => element.classList.remove('link-active'));
+        e.target.classList.add('link-active');
+    }
+    
+	
 
 	switch (attr) {
 		case "services-link":
@@ -135,7 +139,9 @@ let firstSlide = document.querySelector('.block1');
 let secondSlide = document.querySelector('.block2');
 
 function slideAction(e) {
-	e.target.nextElementSibling.classList.toggle('background-off');
+    if (e.target.nextElementSibling.classList.contains('background')) {
+        e.target.nextElementSibling.classList.toggle('background-off');
+    }
 }
 
 firstSlide.addEventListener('click', slideAction);
