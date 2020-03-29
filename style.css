@@ -747,6 +747,14 @@ textarea::-webkit-input-placeholder{color: #f48c8f;}
 	cursor: pointer;
 }
 
+.window-descr{
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 162px;
+	text-align: center;
+	overflow-y: scroll;
+}
+
 .window-ok:hover {
 	background-color: #c82333;
 	border-color: #bd2130;
